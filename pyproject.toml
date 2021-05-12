@@ -6,6 +6,7 @@ authors = ["Jon Whittlestone <dev@howapped.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+black = "^21.5b1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
