@@ -1,4 +1,4 @@
-print('Chapter 02 - Exercise 01')
+print('Chapter 02 - Exercise 06')
 print('')
 # If word begins with vowel, add "way"
 # If word begins with any other letter, move

@@ -1,4 +1,4 @@
-print('Chapter 02 - Exercise 02')
+print('Chapter 02 - Exercise 04')
 print('')
 
 # Input string is collection of words
