@@ -1,42 +1,43 @@
-from collections import Counter
+import pprint
+import operator
+from typing import Tuple
 print("Chapter 03 - Exercise 12")
 print("")
 
-# Exercise specifies using itemgetter
-#   Use `Counter()` - https://docs.python.org/3/library/collections.html?#collections.Counter.most_common
-
-
-def most_repeating_word(seq):    
+def format_sort_records(people: list):    
    """
-      For each word, find the letter that appears the most times
-      Example: 
-         seq = ['this', 'is', 'an', 'elementary', 'test', 'example']
-         result = elementary
-            * 'this', 'is', 'an' have no repeating letters
-            * 'elementary' has the letter 'e' which repeats three times
-            * 'exmple' has a repeating letter: 'e' repeats twice
-   """
-   # We could iterate
-   current_word = ''
-   current_tally = 0
-   word_letter_counts = []
-   for i, w in enumerate(seq.split(' ')):
-      word_letter_counts.append(Counter(w).most_common(1))
-      if Counter(w).most_common(1)[0][1] > current_tally:
-         current_word = seq.split(' ')[i]
-         current_tally = Counter(w).most_common(1)[0][1]
-   
-   # Or we could just use `max`
-   current_word = max(seq.split(' '), key=most_repeating_letter_count)
-   return current_word
+      Displaying formatted records in a table
 
-def most_repeating_letter_count(word):
-    return Counter(word).most_common(1)[0][1] 
+      Example input
+      PEOPLE = [
+         ('Donald', 'Trump', 7.85),          
+         ('Vladimir', 'Putin', 3.626),          
+         ('Jinping', 'Xi', 10.603)
+      ]
+
+      Example output
+      Trump      Donald      7.85
+      Putin      Vladimir    3.63
+      Xi         Jinping    10.60
+   """
+   output = []
+   template = "{1:10} {0:10} {2:5.2f}"
+   for person in sorted(people, key=operator.itemgetter(1,0)):
+      # person = ('Vladimir', 'Putin', '3.626')
+      formatted = template.format(*person)
+      # formatted = 'Putin      Vladimir    3.63'
+      output.append(formatted)
+   return '\n'.join(output)
 
 if __name__ == "__main__":
-   seq = 'hello hello how are you my friend. The envelope is widening for socialising in the public sphere.' 
-   seq = 'this is an elementary test example' 
-   result = most_repeating_word(seq)
-   print(f'Input to most Repeating Word: {seq}')
+   people = [
+      ('Donald', 'Trump', 7.85),          
+      ('Vladimir', 'Putin', 3.626),          
+      ('Jinping', 'Xi', 10.603)
+   ]
+   result = format_sort_records(people)
+   print('Input People:')
+   pprint.pprint(people)
    print('')
-   print(f'Result: {result}')
+   print('Output formatted:')
+   print(result)
