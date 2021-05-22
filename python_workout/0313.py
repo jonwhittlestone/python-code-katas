@@ -1,7 +1,8 @@
 import pprint
 import operator
 from typing import Tuple
-print("Chapter 03 - Exercise 12")
+print("Chapter 03 - Exercise 13")
+print("Printing Tuple Records")
 print("")
 
 def format_sort_records(people: list):    

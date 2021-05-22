@@ -1,4 +1,5 @@
 print("Chapter 03 - Exercise 10")
+print("Summing Anything")
 print("")
 
 # Run methods not on the argument
