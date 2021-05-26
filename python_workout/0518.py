@@ -1,4 +1,3 @@
-import os
 print('Chapter 05 - Exercise 18')
 print('')
 print('Reading a file. and returning the final line.')
