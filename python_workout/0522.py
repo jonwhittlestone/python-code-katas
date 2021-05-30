@@ -15,7 +15,6 @@ def passwd_to_csv(in_file, out_file):
             row = ln.split(':')
             if len(row) > 1:
                 o.writerow([row[0], row[2]])
-            debug = True
 
     print(f"Finished writing to {out_file}")
 
