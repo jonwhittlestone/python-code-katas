@@ -1,13 +1,13 @@
 import os
 import pathlib
 import csv
-print('Chapter 05 - Exercise 23')
+print('Chapter 05 - Exercise 24')
 print('')
 print('Reverse Lines')
 
 
 def reverse_file(path_in: str, path_out):
-    """Gets and prints the spreadsheet's header columns
+    """Reverses lines of input file to new output file
     Example input:
         abc def
         ghi jkl
