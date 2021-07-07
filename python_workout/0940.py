@@ -1,4 +1,4 @@
-print('Chapter 08 - Exercise 40')
+print('Chapter 09 - Exercise 40')
 print('Enforce a limit to scoops with a Bowl instance variable with the ICPO rule.')
 
 

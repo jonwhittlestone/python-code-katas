@@ -1,5 +1,5 @@
 
-print('Chapter 08 - Exercise 39')
+print('Chapter 09 - Exercise 39')
 print('Create Ice Cream scoop objects, and have a Bowl object add them')
 print('')
 

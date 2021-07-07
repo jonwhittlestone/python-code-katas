@@ -1,4 +1,4 @@
-print('Chapter 08 - Exercise 38')
+print('Chapter 09 - Exercise 38')
 print('Create Ice Cream scoop objects')
 print('')
 
