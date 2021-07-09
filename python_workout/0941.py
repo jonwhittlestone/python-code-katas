@@ -1,4 +1,3 @@
-
 print('Chapter 09 - Exercise 41')
 print('Enforce a limit to scoops with a BigBowl instance variable with the ICPO rule.')
 
